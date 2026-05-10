@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Freebie 64 - Portfolio (Tailwind CSS) by pixelcave</title>
+
+    <meta
+      name="description"
+      content="Freebie 64 - Portfolio (Tailwind CSS). Check out more."
+    />
+    <meta name="author" content="pixelcave" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      href="/assets/logo.png"
+      sizes="any"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="assets/logo.png"
+      type="image/png"
+    />
+
+    <!-- Inter web font from bunny.net (GDPR compliant) -->
+    <!-- <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Tailwind CSS Play CDN (mostly for development/testing purposes) -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind CSS v4 Configuration -->
+    <style type="text/tailwindcss">
+      /* Class based dark mode */
+      @custom-variant dark (&:where(.dark, .dark *));
+
+      /* Theme configuration */
+      @theme {
+        /* Fonts */
+        --default-font-family: "Inter";
+
+        --color-sand: #f5edd8;
+        --color-dirt: #d4b483;
+        --color-rust: #c84b2f;
+        --color-darkGreen: #4e5a26;
+        --color-green: #7b8c4e;
+        --color-yellow: #e8952a;
+        }
+    </style>
+
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Alpine.js (x-cloak - https://alpinejs.dev/directives/cloak) -->
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Page Container -->
+    <div
+      class="min-h-dvh min-w-80 bg-sand text-zinc-800"
+    >
+      <!-- Page Content -->
+      <main
+        id="page-content"
+        class="mx-auto bg-sand flex max-w-6xl flex-auto flex-col px-4 pb-4 lg:px-8 lg:pb-8"
+      >
+        <!-- Main Header -->
+        <header
+          id="page-header"
+          class="flex flex-none items-center justify-between py-7"
+        >
+          <div class="flex items-center gap-2">
+            <!-- Logo -->
+            <a
+              href="/assets/logo.png"
+              class="text-2xl tracking-widest active:opacity-75 font-bold"
+            >
+              Arab Cultural Retreat 2026
+            </a>
+            <!-- END Logo -->
+
+          </div>
+          <div class="flex items-center gap-4">
+            <!-- Nav -->
+            <nav class="flex items-center gap-6">
+              <a
+                href="#register"
+                class="text-sm font-medium decoration-rust decoration-2 underline-offset-8 hover:text-black hover:underline dark:decoration-rust"
+              >
+                Register
+              </a>
+              <a
+                href="#contact"
+                class="text-sm font-medium decoration-rust decoration-2 underline-offset-8 hover:text-black hover:underline dark:decoration-rust"
+              >
+                Contact
+              </a>
+            </nav>
+            <!-- END Nav -->
+          </div>
+        </header>
+        <!-- END Main Header -->
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
+          <!-- Photo -->
+          <div class="col-span-1 md:col-span-5">
+            <img
+              src="assets/logo.png"
+              alt="Photo"
+              class="rounded-xl object-cover w-full aspect-square"
+            />
+          </div>
+          <!-- END Photo -->
+
+          <!-- Intro -->
+         <div
+            class="relative col-span-1 flex flex-col justify-center items-center overflow-hidden p-12 sm: p-6 md:col-span-7"
+          >
+            <div class="relative">
+              <h1 class="text-4xl font-medium text-black dark:text-white">
+                Join us!
+              </h1>
+              <h2 class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
+                Register for this year's Arab Cultural Retreat for a week to connect with other Arab
+                in North America, connect with our culture, learn about our history, and engage in fun 
+                activities. Registration is open until May 30th! Read more about the retreat details below.
+              </h2>
+            </div>
+          </div>
+          <!-- END Intro -->
+
+          <!-- Projects -->
+          <div class="relative col-span-1 md:col-span-12 bg-dirt p-12 sm: h-fit lg: h-[130vh] overflow-hidden">
+
+            <!-- Top cards -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
+
+              <!-- CONNECT -->
+              <div class="group relative col-span-1 overflow-hidden rounded-xl bg-dirt p-2 pt-0 md:col-span-4">
+                <div class="absolute top-2 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="mt-10 flex justify-center items-center transition duration-150 ease-out group-hover:scale-105">
+                  <img src="assets/connect.png" alt="Example Image" class="rounded-lg" />
+                </div>
+                <h3 class="text-lg font-medium text-zinc-950 p-2 dark:text-zinc-50 mt-2 text-center">
+                  Build relationships with other Arabs across North America
+                </h3>
+              </div>
+
+              <!-- LEARN -->
+              <div class="group relative col-span-1 overflow-hidden rounded-xl p-2 pt-0 md:col-span-4">
+                <div class="absolute top-2 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="mt-10 flex justify-center items-center transition duration-150 ease-out group-hover:scale-105">
+                  <img src="assets/learn.png" alt="Example Image" class="rounded-lg" />
+                </div>
+                <h3 class="text-lg font-medium text-zinc-950 p-2 dark:text-zinc-50 mt-2 text-center">
+                  Learn from workshops about the history of our countries
+                </h3>
+              </div>
+
+              <!-- ENGAGE -->
+              <div class="group relative col-span-1 overflow-hidden rounded-xl p-2 pt-0 md:col-span-4">
+                <div class="absolute top-2 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="mt-10 flex justify-center items-center transition duration-150 ease-out group-hover:scale-105">
+                  <img src="assets/engage.png" alt="Example Image" class="rounded-lg" />
+                </div>
+                <h3 class="text-lg font-medium text-zinc-950 p-2 dark:text-zinc-50 mt-2 text-center">
+                  Play games, join sports tournaments and cook offs!
+                </h3>
+              </div>
+
+            </div>
+
+            <!-- FAQ — independently scrollable, does not affect page layout -->
+            <div class="w-full lg:w-1/2 mx-auto lg:mx-0 mt-10 w-1/2">
+              <h2 class="text-2xl font-bold text-zinc-900 mb-4">Frequently Asked Questions</h2>
+              <div class="space-y-3">
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    Who is this retreat for?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">This retreat is open to Arabs of all ages and backgrounds living in North America. Whether you're coming solo, as a couple, or with your whole family, everyone is welcome — from grandparents to little ones.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    Can non-Arabs attend?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">This retreat is designed as a space for Arabs to connect with their culture and community. We ask that attendees are of Arab heritage or part of an Arab family.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    How much does it cost to attend?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">Registration is $350 per adult and $150 per child (under 12). Family packages (2 adults + up to 3 children) are available for $750. A $100 deposit is required at registration, with the remaining balance due by June 15th.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    What's included in the price?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">Your registration covers all meals throughout the week, accommodation in shared cabins, access to all cultural workshops, sports tournaments, cooking competitions, evening social events, and all activity materials.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    When and where is the retreat?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">The retreat runs July 14–20, 2026 at a scenic campground in Ontario, Canada. Full address and directions will be sent upon registration confirmation.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    What is the refund policy?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">Cancellations before June 1st are eligible for a full refund minus the $100 deposit. Cancellations after June 1st are non-refundable, but your spot may be transferred to another attendee.</p>
+                </details>
+
+                <details name="faq" class="group rounded-lg bg-sand p-4">
+                  <summary class="cursor-pointer font-semibold text-zinc-900 list-none flex justify-between items-center">
+                    How do I register?
+                    <span class="transition group-open:rotate-180">▾</span>
+                  </summary>
+                  <p class="mt-3 text-sm text-zinc-800 leading-relaxed">Fill out the registration form on this page and submit your deposit online. You'll receive a confirmation email within 48 hours.</p>
+                </details>
+
+              </div>
+            </div>
+
+            <!-- Door — absolutely pinned to bottom right of the container -->
+            <div class="hidden lg:block absolute bottom-0 right-12">
+              <img src="assets/door.png" alt="" class="w-[420px] rounded-lg" />
+            </div>
+
+          </div>
+          <!-- END Projects -->
+
+          <!-- Register -->
+          <div
+            id="contact"
+            class="relative col-span-1 flex flex-col overflow-hidden rounded-xl bg-sand px-12 py-20 md:col-span-12"
+          >
+            <div
+              aria-hidden="true"
+              class="absolute -top-20 -left-20 size-72 rounded-full bg-yellow blur-2xl"
+            ></div>
+            <div
+              aria-hidden="true"
+              class="absolute -right-48 -bottom-48 size-72 rounded-full bg-rust blur-2xl"
+            ></div>
+            <div
+              aria-hidden="true"
+              class="absolute -top-48 -right-48 size-96 rounded-full bg-green blur-3xl"
+            ></div>
+            <div
+              aria-hidden="true"
+              class="absolute -bottom-48 -left-20 size-72 rounded-full bg-rust blur-2xl"
+            ></div>
+            <div
+              aria-hidden="true"
+              class="absolute inset-0 bg-sand-100/50 backdrop-blur-md"
+            ></div>
+            <div id= "register" class="relative mx-auto mt-auto max-w-md pt-2">
+              <h2 class="text-4xl font-medium text-black dark:text-white">
+                Register today
+              </h2>
+              <h3 class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
+                Spots are limited — secure yours today! Fill out the interest form below to register 
+                for the Arab Cultural Retreat 2026. We will reach out with next steps. 
+                We can't wait to welcome you. Registration closes May 30th.
+              </h3>
+              <form onsubmit="return false;" class="mt-10 w-full space-y-6">
+                <div class="space-y-2">
+                  <label for="name" class="inline-block text-sm font-medium">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-rust focus:ring-3 focus:ring-rust/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label for="email" class="inline-block text-sm font-medium">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-rust focus:ring-3 focus:ring-rust/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label for="message" class="inline-block text-sm font-medium"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-rust focus:ring-3 focus:ring-rust/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="inline-flex w-full items-center justify-center gap-2 rounded-lg border bg-rust px-5 py-3 text-sm leading-6 font-semibold text-white hover:border-green hover:bg-green hover:text-white active:border-purple-700 lg:w-auto"
+                >
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- END Register -->
+
+        <!-- Contact -->
+        <div
+          id="contact"
+          class="relative col-span-1 md:col-span-12 flex items-center justify-between overflow-hidden pt-10"
+        >
+          <h1 class="text-4xl font-medium text-black dark:text-white">
+            Any questions? Contact us!
+          </h1>
+          <a
+            href="mailto:arabculturalretreat@gmail.com"
+            class="px-5 py-2 rounded-lg bg-rust text-sand font-semibold text-sm hover:bg-yellow hover:text-black transition duration-150 whitespace-nowrap min-w-1/2 text-center"
+          >
+            Send us an email
+          </a>
+        </div>
+        <!-- END Contact -->
+
+          <!-- Footer -->
+          <footer
+            class="flex flex-col gap-6 py-7 text-center text-sm md:col-span-12 md:flex-row-reverse md:justify-between md:gap-0 md:text-left"
+          >
+
+            <div class="text-zinc-500 dark:text-zinc-400/80">
+              <span class="font-medium">Arab Cultural Retreat 2026</span> ©
+              <span x-text="new Date().getFullYear()"></span>
+              <p>PO Box 1531 | Lame Deer, MT 59043 US</p>
+            </div>
+          </footer>
+          <!-- END Footer -->
+        </div>
+        <!-- END Main Content -->
+      </main>
+      <!-- END Page Content -->
+    </div>
+    <!-- END Page Container -->
+  </body>
+</html>
